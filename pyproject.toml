@@ -1,10 +1,10 @@
 [project]
 name = "golem-telegram"
 version = "0.1.0"
-description = "Add your description here"
+description = "Telegram channel extension for Golem"
 readme = "README.md"
 authors = [
-    { name = "Nawaz Gafar", email = "gafar.nawaz@gmail.com" }
+    { name = "Nawaz Gafar" }
 ]
 requires-python = ">=3.10"
 dependencies = []
@@ -15,3 +15,15 @@ golem-telegram = "golem_telegram:main"
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
