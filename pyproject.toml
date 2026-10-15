@@ -6,8 +6,10 @@ readme = "README.md"
 authors = [
     { name = "Nawaz Gafar" }
 ]
-requires-python = ">=3.10"
-dependencies = []
+requires-python = ">=3.11"
+dependencies = [
+    "golem-agent-sdk>=0.1.5",
+]
 
 [project.scripts]
 golem-telegram = "golem_telegram:main"
