@@ -11,15 +11,16 @@ dependencies = [
     "golem-agent-sdk>=0.1.5",
 ]
 
-[project.scripts]
-golem-telegram = "golem_telegram:main"
-
 [build-system]
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
 
 [tool.uv.build-backend]
 module-root = ""
+
+[tool.golem.channel]
+id = "telegram"
+entrypoint = "golem_telegram:Telegram"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
